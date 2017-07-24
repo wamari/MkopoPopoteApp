@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Mkopo Popote</string>
+    <string name="forgotPassword">Forgot your password?</string>
+    <string name="dontHave">Don\'t have an account?</string>
+    <string name="create">Create one</string>
+    <string name="buttonSignIn">Sign In</string>
+    <string name="passwordHint">Enter Password</string>
+    <string name="phoneHint">+2547XXXXXXXX</string>
+</resources>
