@@ -5,7 +5,6 @@ import android.content.pm.PackageManager;
 import android.os.AsyncTask;
 
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.ActivityManagerCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,8 +13,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
-import java.util.jar.Manifest;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -89,6 +90,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         final String email = editTextEmail.getText().toString().trim();
         final String dob = editTextDOB.getText().toString().trim();
         final String gender = editTextGender.getText().toString().trim();
+
 
         class AddUser extends AsyncTask<Void, Void, String>{
             ProgressDialog loading; //// TODO: 7/26/17 Progress Dialog depracated, look for alternative

@@ -6,4 +6,5 @@
     <string name="buttonSignIn">Sign In</string>
     <string name="passwordHint">Enter Password</string>
     <string name="phoneHint">+2547XXXXXXXX</string>
+    <string name="introText">Thank you for installing - let\s get you setup!</string>
 </resources>
