@@ -2,6 +2,7 @@ package com.harlertechnologies.mkopopopoteapp;
 
 import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.icu.util.Calendar;
 import android.os.AsyncTask;
@@ -157,8 +158,9 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             }
         }else {
             au.execute();
-            
-            //// TODO: 7/27/17 Start next activity 
+            //// TODO: 7/27/17 pass values to this activity
+            Intent intent = new Intent(this, AccountActivity.class);
+            startActivity(intent);
         }
     }
 
