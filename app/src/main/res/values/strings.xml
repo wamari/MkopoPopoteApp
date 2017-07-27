@@ -14,6 +14,11 @@
     <string name="buttonNext">Next</string>
     <string name="first_name">First Name</string>
     <string name="enter_gender">Enter Gender</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="enter_the_details_below">Enter the details below..</string>
+    <string name="phone_no_254xxxxxxxxx">Phone No: 254XXXXXXXXX</string>
 
     <string-array name="gender_array">
         <item>Please select your gender</item>
