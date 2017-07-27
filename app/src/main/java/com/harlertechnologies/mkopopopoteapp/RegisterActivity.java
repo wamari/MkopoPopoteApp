@@ -28,7 +28,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private EditText editTextDOB;
     private EditText editTextGender;
 
-    private Button buttonSignUp;
+    private Button buttonNext;
 
     final int MY_PERMISSIONS_REQUEST_ACCESS_COARSE_LOCATION = 123;
 
@@ -77,10 +77,10 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         editTextDOB=(EditText) findViewById(R.id.editTextDOB);
         editTextGender=(EditText) findViewById(R.id.editTextGender);
 
-        buttonSignUp = (Button) findViewById(R.id.buttonSignUp);
+        buttonNext = (Button) findViewById(R.id.buttonNext);
 
         //setting listeners to button
-        buttonSignUp.setOnClickListener(this);
+        buttonNext.setOnClickListener(this);
     }
 
     public void addUser(){
@@ -129,7 +129,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
     @Override
     public void onClick(View v){
-        if(v == buttonSignUp){
+        if(v == buttonNext){
             addUser();
         }
     }
