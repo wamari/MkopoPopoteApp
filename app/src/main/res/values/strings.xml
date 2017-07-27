@@ -14,4 +14,10 @@
     <string name="buttonNext">Next</string>
     <string name="first_name">First Name</string>
     <string name="enter_gender">Enter Gender</string>
+
+    <string-array name="gender_array">
+        <item>Please select your gender</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
 </resources>

@@ -9,14 +9,17 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.StringTokenizer;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -28,8 +31,10 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private EditText editTextDOB;
     private EditText editTextGender;
     private Button buttonNext;
+    private Spinner genderSpinner;
 
     final int MY_PERMISSIONS_REQUEST_ACCESS_COARSE_LOCATION = 123;
+
 
 
     @Override
@@ -74,9 +79,18 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         editTextFirstname = (EditText) findViewById(R.id.editTextFirstname);
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextDOB=(EditText) findViewById(R.id.editTextDOB);
-        editTextGender=(EditText) findViewById(R.id.editTextGender);
+        genderSpinner=(Spinner) findViewById(R.id.genderSpinner);
 
         buttonNext = (Button) findViewById(R.id.buttonNext);
+
+        //populate spinner
+        genderSpinner = (Spinner) findViewById(R.id.genderSpinner);
+        // Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.gender_array, android.R.layout.simple_spinner_item);
+        // Specify the layout to use when the list of choices appears
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // Apply the adapter to the spinner
+        genderSpinner.setAdapter(adapter);
 
         //setting listeners to button
         buttonNext.setOnClickListener(this);
@@ -88,7 +102,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         final String firstname = editTextFirstname.getText().toString().trim();
         final String email = editTextEmail.getText().toString().trim();
         final String dob = editTextDOB.getText().toString().trim();
-        final String gender = editTextGender.getText().toString().trim();
+        final String gender = genderSpinner.getSelectedItem().toString();
 
 
         class AddUser extends AsyncTask<Void, Void, String>{
@@ -123,7 +137,13 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             }
         }
         AddUser au = new AddUser();
-        au.execute();
+        //// TODO: 7/27/17 Validate
+        String genderCheck = String.valueOf(genderSpinner.getSelectedItem());
+        if(genderCheck.equals("Please select your gender")){
+            Toast.makeText(RegisterActivity.this,"Please select your gender", Toast.LENGTH_SHORT).show();
+        }else {
+            au.execute();
+        }
     }
 
     @Override
