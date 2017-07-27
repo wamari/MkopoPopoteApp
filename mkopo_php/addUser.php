@@ -15,6 +15,8 @@
  //Importing our db connection script
  require_once('dbConnect.php');
  
+//do some validation before inserting data
+
  //Executing query to database
  if(mysqli_query($con,$sql)){
  echo 'Account created Successfully';

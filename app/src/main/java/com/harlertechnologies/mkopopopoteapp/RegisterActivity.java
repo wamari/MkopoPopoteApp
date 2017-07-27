@@ -27,7 +27,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private EditText editTextEmail;
     private EditText editTextDOB;
     private EditText editTextGender;
-
     private Button buttonNext;
 
     final int MY_PERMISSIONS_REQUEST_ACCESS_COARSE_LOCATION = 123;
