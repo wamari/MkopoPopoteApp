@@ -1,7 +1,9 @@
 package com.harlertechnologies.mkopopopoteapp;
 
+import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.content.pm.PackageManager;
+import android.icu.util.Calendar;
 import android.os.AsyncTask;
 
 import android.support.v4.app.ActivityCompat;
@@ -30,7 +32,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private EditText editTextFirstname;
     private EditText editTextEmail;
     private EditText editTextDOB;
-    private EditText editTextGender;
     private Button buttonNext;
     private Spinner genderSpinner;
 
