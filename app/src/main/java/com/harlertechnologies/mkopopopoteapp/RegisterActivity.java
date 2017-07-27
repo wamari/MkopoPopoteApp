@@ -107,7 +107,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
 
         class AddUser extends AsyncTask<Void, Void, String>{
-            ProgressDialog loading; //// TODO: 7/26/17 Progress Dialog depracated, look for alternative
+            ProgressDialog loading; //// TODO: 7/26/17 Progress Dialog deprecated, look for alternative
 
             @Override
             protected void onPreExecute(){
