@@ -156,6 +156,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             }
         }else {
             au.execute();
+            
+            //// TODO: 7/27/17 Start next activity 
         }
     }
 
